@@ -79,10 +79,4 @@ public class ClsMovie extends ClsReference {
     public void setaInterpreters(String aInterpreters) {
         this.aInterpreters = aInterpreters;
     }
-
-    @Override
-    public String toString() {
-        return "Cls_Movie{" + "aGender=" + aGender + ", aYear=" + aYear + ", aDirector=" + aDirector + ", aInterpreters=" + aInterpreters + '}';
-    }
-
 }

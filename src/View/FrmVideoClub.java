@@ -1,5 +1,6 @@
 package View;
 
+import javax.swing.JButton;
 import javax.swing.SpinnerNumberModel;
 
 /**
@@ -37,6 +38,8 @@ public class FrmVideoClub extends javax.swing.JFrame {
         tblmovies = new javax.swing.JTable();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblVideoGames = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         PanelAddProduct = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtPrice = new javax.swing.JTextField();
@@ -44,7 +47,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
         RbdMovie = new javax.swing.JRadioButton();
         RbdVideoGame = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
-        txtTittle1 = new javax.swing.JTextField();
+        txtTittle = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         spnDays = new javax.swing.JSpinner();
         jLabel5 = new javax.swing.JLabel();
@@ -52,16 +55,46 @@ public class FrmVideoClub extends javax.swing.JFrame {
         RbdNot = new javax.swing.JRadioButton();
         jSeparator1 = new javax.swing.JSeparator();
         panelInformationVideogame = new javax.swing.JPanel();
-        CmbStyle = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         CmbPlatform = new javax.swing.JComboBox<>();
+        CmbStyle = new javax.swing.JComboBox<>();
+        btnSaveProduct = new javax.swing.JButton();
+        panelinformationMovie = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        CmbGender = new javax.swing.JComboBox<>();
+        jLabel39 = new javax.swing.JLabel();
+        txtYear = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        txtDirector = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        txtInterpreters = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        tblListClient = new javax.swing.JTable();
+        jLabel18 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        txtID = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        txtAddres = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        txtTelephone = new javax.swing.JTextField();
+        btnSaveClient = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jPanel10 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblClients = new javax.swing.JTable();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -79,6 +112,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
 
         PanelListProduct.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblmovies.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         tblmovies.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -91,6 +125,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
 
         PanelListProduct.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 980, 150));
 
+        tblVideoGames.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         tblVideoGames.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -102,6 +137,12 @@ public class FrmVideoClub extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblVideoGames);
 
         PanelListProduct.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 980, 160));
+
+        jLabel8.setText("Movies");
+        PanelListProduct.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jLabel9.setText("Video Game");
+        PanelListProduct.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         panels.addTab("List Product", PanelListProduct);
 
@@ -124,7 +165,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
 
         jLabel3.setText("Title : ");
         PanelAddProduct.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
-        PanelAddProduct.add(txtTittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 150, -1));
+        PanelAddProduct.add(txtTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 150, -1));
 
         jLabel4.setText("Rental Term :");
         PanelAddProduct.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
@@ -142,24 +183,50 @@ public class FrmVideoClub extends javax.swing.JFrame {
         PanelAddProduct.add(RbdNot, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, -1, -1));
 
         jSeparator1.setForeground(new java.awt.Color(194, 73, 73));
-        PanelAddProduct.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 790, 30));
+        PanelAddProduct.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 880, 30));
 
         panelInformationVideogame.setBorder(javax.swing.BorderFactory.createTitledBorder("Information Video Games"));
         panelInformationVideogame.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        CmbStyle.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select :", "Action", "Sports", "Adventure", "Puzzle", "Childish", " " }));
-        panelInformationVideogame.add(CmbStyle, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 170, -1));
-
         jLabel6.setText("Style :");
-        panelInformationVideogame.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 50, -1));
+        panelInformationVideogame.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 50, -1));
 
         jLabel7.setText("Platform:");
-        panelInformationVideogame.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 70, -1));
+        panelInformationVideogame.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 70, -1));
 
-        CmbPlatform.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select :", "Xbox", "PlayStation", "Wii", " " }));
-        panelInformationVideogame.add(CmbPlatform, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 170, -1));
+        CmbPlatform.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select :", "Xbox", "PlayStation", "Wii" }));
+        panelInformationVideogame.add(CmbPlatform, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 170, -1));
 
-        PanelAddProduct.add(panelInformationVideogame, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 560, 100));
+        CmbStyle.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select :", "Action", "Sports", "Adventure", "Puzzle", "Childish" }));
+        panelInformationVideogame.add(CmbStyle, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 170, -1));
+
+        PanelAddProduct.add(panelInformationVideogame, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 370, 170));
+
+        btnSaveProduct.setText("Save");
+        PanelAddProduct.add(btnSaveProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 370, 90, 40));
+
+        panelinformationMovie.setBorder(javax.swing.BorderFactory.createTitledBorder("Information Movie"));
+        panelinformationMovie.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel38.setText("Gender :");
+        panelinformationMovie.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+
+        CmbGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select :", "Action", "Fantastic", "Drama", "Adventure", "Puzzle", "Childish" }));
+        panelinformationMovie.add(CmbGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 170, -1));
+
+        jLabel39.setText("Year: ");
+        panelinformationMovie.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
+        panelinformationMovie.add(txtYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 90, -1));
+
+        jLabel40.setText("Director: ");
+        panelinformationMovie.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, -1));
+        panelinformationMovie.add(txtDirector, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 160, -1));
+
+        jLabel41.setText("Interpreters :");
+        panelinformationMovie.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
+        panelinformationMovie.add(txtInterpreters, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 160, -1));
+
+        PanelAddProduct.add(panelinformationMovie, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 530, 170));
 
         panels.addTab("Add Product", PanelAddProduct);
 
@@ -176,29 +243,46 @@ public class FrmVideoClub extends javax.swing.JFrame {
 
         panels.addTab("Product Tab", jPanel5);
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 422, Short.MAX_VALUE)
-        );
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblListClient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        tblListClient.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane7.setViewportView(tblListClient);
+
+        jPanel7.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 670, 240));
+
+        jLabel18.setText("Clients");
+        jPanel7.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 110, 40));
 
         panels.addTab("List Client", jPanel7);
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 422, Short.MAX_VALUE)
-        );
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setText("ID: ");
+        jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
+        jPanel8.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 220, -1));
+
+        jLabel15.setText("Name : ");
+        jPanel8.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, -1, -1));
+        jPanel8.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 220, -1));
+
+        jLabel16.setText("Addres:");
+        jPanel8.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, -1));
+        jPanel8.add(txtAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 210, -1));
+
+        jLabel17.setText("Telephone:");
+        jPanel8.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, -1, -1));
+        jPanel8.add(txtTelephone, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 210, -1));
+
+        btnSaveClient.setText("Save");
+        jPanel8.add(btnSaveClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, 70, 50));
 
         panels.addTab("Add Client", jPanel8);
 
@@ -215,31 +299,67 @@ public class FrmVideoClub extends javax.swing.JFrame {
 
         panels.addTab("Client Tab", jPanel9);
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 422, Short.MAX_VALUE)
-        );
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panels.addTab("Rental Product", jPanel10);
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable3);
 
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 422, Short.MAX_VALUE)
-        );
+        jPanel11.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 970, 310));
 
         panels.addTab("Consult Rent", jPanel11);
+
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblClients.setBorder(javax.swing.BorderFactory.createTitledBorder("Client List"));
+        tblClients.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane3.setViewportView(tblClients);
+
+        jPanel10.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 390, 110));
+
+        jTable1.setBorder(javax.swing.BorderFactory.createTitledBorder("Product List Video Game"));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane4.setViewportView(jTable1);
+
+        jPanel10.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 410, 170));
+
+        jTable2.setBorder(javax.swing.BorderFactory.createTitledBorder("Product list Movie"));
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane5.setViewportView(jTable2);
+
+        jPanel10.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 410, 170));
+
+        panels.addTab("Rental Product", jPanel10);
 
         getContentPane().add(panels, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 460));
 
@@ -257,7 +377,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -282,6 +402,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CmbGender;
     private javax.swing.JComboBox<String> CmbPlatform;
     private javax.swing.JComboBox<String> CmbStyle;
     private javax.swing.JPanel PanelAddProduct;
@@ -290,15 +411,28 @@ public class FrmVideoClub extends javax.swing.JFrame {
     private javax.swing.JRadioButton RbdNot;
     private javax.swing.JRadioButton RbdVideoGame;
     private javax.swing.JRadioButton RbdYes;
+    private javax.swing.JButton btnSaveClient;
+    private javax.swing.JButton btnSaveProduct;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel5;
@@ -308,22 +442,36 @@ public class FrmVideoClub extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JPanel panelInformationVideogame;
+    private javax.swing.JPanel panelinformationMovie;
     private javax.swing.JTabbedPane panels;
     private javax.swing.JSpinner spnDays;
+    private javax.swing.JTable tblClients;
+    private javax.swing.JTable tblListClient;
     private javax.swing.JTable tblVideoGames;
     private javax.swing.JTable tblmovies;
+    private javax.swing.JTextField txtAddres;
+    private javax.swing.JTextField txtDirector;
+    private javax.swing.JTextField txtID;
+    private javax.swing.JTextField txtInterpreters;
+    private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPrice;
-    private javax.swing.JTextField txtTittle1;
+    private javax.swing.JTextField txtTelephone;
+    private javax.swing.JTextField txtTittle;
+    private javax.swing.JTextField txtYear;
     // End of variables declaration//GEN-END:variables
 
     public javax.swing.JComboBox<String> getCmbPlatform() {
         return CmbPlatform;
-    }
-
-    public javax.swing.JComboBox<String> getCmbStyle() {
-        return CmbStyle;
     }
 
     public javax.swing.JPanel getPanelAddProduct() {
@@ -366,11 +514,79 @@ public class FrmVideoClub extends javax.swing.JFrame {
         return txtPrice;
     }
 
-    public javax.swing.JTextField getTxtTittle1() {
-        return txtTittle1;
+    public javax.swing.JTextField getTxtTittle() {
+        return txtTittle;
     }
 
     public javax.swing.JTabbedPane getPanels() {
         return panels;
+    }
+
+    public JButton getBtnSaveProduct() {
+        return btnSaveProduct;
+    }
+
+    public javax.swing.JPanel getPanelInformationVideogame() {
+        return panelInformationVideogame;
+    }
+
+    public javax.swing.JComboBox<String> getCmbGender() {
+        return CmbGender;
+    }
+
+    public javax.swing.JButton getBtnSaveClient() {
+        return btnSaveClient;
+    }
+
+    public javax.swing.JPanel getPanelinformationMovie() {
+        return panelinformationMovie;
+    }
+
+    public javax.swing.JTable getTblClients() {
+        return tblClients;
+    }
+
+    public javax.swing.JTextField getTxtAddres() {
+        return txtAddres;
+    }
+
+    public javax.swing.JTextField getTxtDirector() {
+        return txtDirector;
+    }
+
+    public javax.swing.JTextField getTxtID() {
+        return txtID;
+    }
+
+    public javax.swing.JTextField getTxtInterpreters() {
+        return txtInterpreters;
+    }
+
+    public javax.swing.JTextField getTxtName() {
+        return txtName;
+    }
+
+    public javax.swing.JTextField getTxtTelephone() {
+        return txtTelephone;
+    }
+
+    public javax.swing.JTextField getTxtYear() {
+        return txtYear;
+    }
+
+    public javax.swing.JComboBox<String> getCmbStyle() {
+        return CmbStyle;
+    }   
+
+    public javax.swing.ButtonGroup getButtonGroup1() {
+        return buttonGroup1;
+    }
+
+    public javax.swing.ButtonGroup getButtonGroup2() {
+        return buttonGroup2;
+    }
+
+    public javax.swing.JTable getTblListClient() {
+        return tblListClient;
     }
 }

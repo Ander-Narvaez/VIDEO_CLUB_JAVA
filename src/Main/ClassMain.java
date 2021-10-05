@@ -1,7 +1,7 @@
 
 package Main;
 
-import Controller.ControllerAddProduct;
+import Controller.ControllerFrmVideoClub;
 
 /**
  *
@@ -10,7 +10,7 @@ import Controller.ControllerAddProduct;
 public class ClassMain {
     public static void main(String[] args) {
         
-        ControllerAddProduct controller = new ControllerAddProduct();
+        ControllerFrmVideoClub controller = new ControllerFrmVideoClub();
         controller.startMain();
     }
     
