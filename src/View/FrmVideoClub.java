@@ -87,7 +87,9 @@ public class FrmVideoClub extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tblConsultRent = new javax.swing.JTable();
+        jLabel10 = new javax.swing.JLabel();
+        txtSearchRents = new javax.swing.JTextField();
         jPanel10 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblClients = new javax.swing.JTable();
@@ -301,20 +303,28 @@ public class FrmVideoClub extends javax.swing.JFrame {
 
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tblConsultRent.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        tblConsultRent.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
-        jScrollPane6.setViewportView(jTable3);
+        jScrollPane6.setViewportView(tblConsultRent);
 
-        jPanel11.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 970, 310));
+        jPanel11.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 940, 310));
+
+        jLabel10.setText("Rental :");
+        jPanel11.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 80, 30));
+
+        txtSearchRents.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchRentsActionPerformed(evt);
+            }
+        });
+        jPanel11.add(txtSearchRents, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 360, -1));
 
         panels.addTab("Consult Rent", jPanel11);
 
@@ -366,6 +376,10 @@ public class FrmVideoClub extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtSearchRentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchRentsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSearchRentsActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -377,7 +391,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -416,6 +430,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -450,12 +465,12 @@ public class FrmVideoClub extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JPanel panelInformationVideogame;
     private javax.swing.JPanel panelinformationMovie;
     private javax.swing.JTabbedPane panels;
     private javax.swing.JSpinner spnDays;
     private javax.swing.JTable tblClients;
+    private javax.swing.JTable tblConsultRent;
     private javax.swing.JTable tblListClient;
     private javax.swing.JTable tblVideoGames;
     private javax.swing.JTable tblmovies;
@@ -465,6 +480,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
     private javax.swing.JTextField txtInterpreters;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPrice;
+    private javax.swing.JTextField txtSearchRents;
     private javax.swing.JTextField txtTelephone;
     private javax.swing.JTextField txtTittle;
     private javax.swing.JTextField txtYear;

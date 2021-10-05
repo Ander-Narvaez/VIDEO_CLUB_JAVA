@@ -87,9 +87,4 @@ public class ClsRentedProducts {
     public void setaAmount(double aAmount) {
         this.aAmount = aAmount;
     }
-
-    @Override
-    public String toString() {
-        return "ClsRentedProducts{" + "aClient=" + aClient + ", aProduct=" + aProduct + ", aRentalDate=" + aRentalDate + ", aReturnDate=" + aReturnDate + ", aAmount=" + aAmount + '}';
-    }
 }
