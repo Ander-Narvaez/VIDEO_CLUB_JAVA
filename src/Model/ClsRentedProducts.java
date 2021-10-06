@@ -11,8 +11,8 @@ public class ClsRentedProducts {
     //Attributes
     private ClsClient aClient;
     private ClsReference aProduct;
-    private Date aRentalDate;
-    private Date aReturnDate;
+    private String aRentalDate;
+    private String aReturnDate;
     private double aAmount;
 
     /**
@@ -24,7 +24,7 @@ public class ClsRentedProducts {
      * @param aReturnDate
      * @param aAmount
      */
-    public ClsRentedProducts(ClsClient aClient, ClsReference aProduct, Date aRentalDate, Date aReturnDate, double aAmount) {
+    public ClsRentedProducts(ClsClient aClient, ClsReference aProduct, String aRentalDate, String aReturnDate, double aAmount) {
         this.aClient = aClient;
         this.aProduct = aProduct;
         this.aRentalDate = aRentalDate;
@@ -64,19 +64,19 @@ public class ClsRentedProducts {
         this.aProduct = aProduct;
     }
 
-    public Date getaRentalDate() {
+    public String getaRentalDate() {
         return aRentalDate;
     }
 
-    public void setaRentalDate(Date aRentalDate) {
+    public void setaRentalDate(String aRentalDate) {
         this.aRentalDate = aRentalDate;
     }
 
-    public Date getaReturnDate() {
+    public String getaReturnDate() {
         return aReturnDate;
     }
 
-    public void setaReturnDate(Date aReturnDate) {
+    public void setaReturnDate(String aReturnDate) {
         this.aReturnDate = aReturnDate;
     }
 

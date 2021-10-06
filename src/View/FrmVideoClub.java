@@ -1,6 +1,7 @@
 package View;
 
 import javax.swing.JButton;
+import javax.swing.JTable;
 import javax.swing.SpinnerNumberModel;
 
 /**
@@ -85,18 +86,23 @@ public class FrmVideoClub extends javax.swing.JFrame {
         txtTelephone = new javax.swing.JTextField();
         btnSaveClient = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        txtRentalDate = new javax.swing.JFormattedTextField();
+        txtReturnDate = new javax.swing.JFormattedTextField();
+        txtAmount = new javax.swing.JTextField();
+        btnSaveRental = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        TblRentalProduct = new javax.swing.JTable();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        TblClientRental = new javax.swing.JTable();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         tblConsultRent = new javax.swing.JTable();
         jLabel10 = new javax.swing.JLabel();
         txtSearchRents = new javax.swing.JTextField();
-        jPanel10 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tblClients = new javax.swing.JTable();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -240,7 +246,7 @@ public class FrmVideoClub extends javax.swing.JFrame {
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 422, Short.MAX_VALUE)
+            .addGap(0, 428, Short.MAX_VALUE)
         );
 
         panels.addTab("Product Tab", jPanel5);
@@ -296,10 +302,65 @@ public class FrmVideoClub extends javax.swing.JFrame {
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 422, Short.MAX_VALUE)
+            .addGap(0, 428, Short.MAX_VALUE)
         );
 
         panels.addTab("Client Tab", jPanel9);
+
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setText("Rental Date:");
+        jPanel10.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+
+        jLabel12.setText("Return Date:");
+        jPanel10.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+
+        jLabel13.setText("Amount:");
+        jPanel10.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
+
+        try {
+            txtRentalDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel10.add(txtRentalDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 200, -1));
+
+        try {
+            txtReturnDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel10.add(txtReturnDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 200, -1));
+        jPanel10.add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 150, -1));
+
+        btnSaveRental.setText("Save");
+        jPanel10.add(btnSaveRental, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 90, 40));
+
+        TblRentalProduct.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane3.setViewportView(TblRentalProduct);
+
+        jPanel10.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 440, 140));
+
+        TblClientRental.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane5.setViewportView(TblClientRental);
+
+        jPanel10.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 440, 140));
+
+        panels.addTab("Rental Product", jPanel10);
 
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -327,49 +388,6 @@ public class FrmVideoClub extends javax.swing.JFrame {
         jPanel11.add(txtSearchRents, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 360, -1));
 
         panels.addTab("Consult Rent", jPanel11);
-
-        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        tblClients.setBorder(javax.swing.BorderFactory.createTitledBorder("Client List"));
-        tblClients.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane3.setViewportView(tblClients);
-
-        jPanel10.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 390, 110));
-
-        jTable1.setBorder(javax.swing.BorderFactory.createTitledBorder("Product List Video Game"));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane4.setViewportView(jTable1);
-
-        jPanel10.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 410, 170));
-
-        jTable2.setBorder(javax.swing.BorderFactory.createTitledBorder("Product list Movie"));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane5.setViewportView(jTable2);
-
-        jPanel10.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 410, 170));
-
-        panels.addTab("Rental Product", jPanel10);
 
         getContentPane().add(panels, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 460));
 
@@ -425,12 +443,18 @@ public class FrmVideoClub extends javax.swing.JFrame {
     private javax.swing.JRadioButton RbdNot;
     private javax.swing.JRadioButton RbdVideoGame;
     private javax.swing.JRadioButton RbdYes;
+    private javax.swing.JTable TblClientRental;
+    private javax.swing.JTable TblRentalProduct;
     private javax.swing.JButton btnSaveClient;
     private javax.swing.JButton btnSaveProduct;
+    private javax.swing.JButton btnSaveRental;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -458,28 +482,27 @@ public class FrmVideoClub extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JPanel panelInformationVideogame;
     private javax.swing.JPanel panelinformationMovie;
     private javax.swing.JTabbedPane panels;
     private javax.swing.JSpinner spnDays;
-    private javax.swing.JTable tblClients;
     private javax.swing.JTable tblConsultRent;
     private javax.swing.JTable tblListClient;
     private javax.swing.JTable tblVideoGames;
     private javax.swing.JTable tblmovies;
     private javax.swing.JTextField txtAddres;
+    private javax.swing.JTextField txtAmount;
     private javax.swing.JTextField txtDirector;
     private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtInterpreters;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPrice;
+    private javax.swing.JFormattedTextField txtRentalDate;
+    private javax.swing.JFormattedTextField txtReturnDate;
     private javax.swing.JTextField txtSearchRents;
     private javax.swing.JTextField txtTelephone;
     private javax.swing.JTextField txtTittle;
@@ -558,10 +581,6 @@ public class FrmVideoClub extends javax.swing.JFrame {
         return panelinformationMovie;
     }
 
-    public javax.swing.JTable getTblClients() {
-        return tblClients;
-    }
-
     public javax.swing.JTextField getTxtAddres() {
         return txtAddres;
     }
@@ -604,5 +623,41 @@ public class FrmVideoClub extends javax.swing.JFrame {
 
     public javax.swing.JTable getTblListClient() {
         return tblListClient;
+    }
+
+    public javax.swing.JButton getBtnSaveRental() {
+        return btnSaveRental;
+    }
+
+    public javax.swing.JTable getTblConsultRent() {
+        return tblConsultRent;
+    }
+
+    public javax.swing.JTextField getTxtAmount() {
+        return txtAmount;
+    }
+
+    public javax.swing.JFormattedTextField getTxtRentalDate() {
+        return txtRentalDate;
+    }
+
+    public javax.swing.JFormattedTextField getTxtReturnDate() {
+        return txtReturnDate;
+    }
+
+    public javax.swing.JTextField getTxtSearchRents() {
+        return txtSearchRents;
+    }
+
+    public javax.swing.JTable getTblMoviesRental() {
+        return TblRentalProduct;
+    }
+
+    public javax.swing.JTable getTblClientRental() {
+        return TblClientRental;
+    }
+
+    public javax.swing.JTable getTblRentalProduct() {
+        return TblRentalProduct;
     }
 }
